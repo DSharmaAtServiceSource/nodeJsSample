@@ -23,9 +23,7 @@ app.get('/', function(request, response) {
 app.get('/oauthcallback', function(req, res) {
 	oauth.authenticate(req, res, app);
 });
-
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
+console.log('App running on Port: '+port);
+app.listen(port);
 
 
